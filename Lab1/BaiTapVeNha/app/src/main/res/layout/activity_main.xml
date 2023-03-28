@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/RowView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Row"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TableLayout
+            android:id="@+id/RowLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/RowView">
+
+            <TableRow>
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="@color/red"
+                    android:orientation="vertical"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="@color/yellow"
+                    android:orientation="vertical"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="@color/green"
+                    android:orientation="vertical"></LinearLayout>
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/ColumnView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coloumn"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/RowLayout" />
+
+        <TableLayout
+            android:id="@+id/ColumnLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ColumnView">
+
+            <TableRow>
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="@color/red"
+                    android:orientation="vertical"></LinearLayout>
+            </TableRow>
+            <TableRow>
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="@color/yellow"
+                    android:orientation="vertical"></LinearLayout>
+            </TableRow>
+            <TableRow>
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="@color/green"
+                    android:orientation="vertical"></LinearLayout>
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/ListView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ListView"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ColumnLayout" />
+
+        <TableLayout
+            android:id="@+id/ListViewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ListView">
+
+            <TableRow>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="@color/red"
+                    android:orientation="horizontal"></LinearLayout>
+            </TableRow>
+            <TableRow>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="@color/yellow"
+                    android:orientation="horizontal"></LinearLayout>
+            </TableRow>
+            <TableRow>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="@color/green"
+                    android:orientation="horizontal"></LinearLayout>
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/GridView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GridView"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ListViewLayout"/>
+
+        <TableLayout
+            android:id="@+id/GridViewLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1"
+            android:layout_margin="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/GridView">
+
+            <TableRow
+                android:layout_width="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="180dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/teal1"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="He'd have you all unravel\nat the"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="180dp"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@color/teal2"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Heed not the rabble"
+                        android:textColor="@color/black"
+                        android:layout_margin="10dp"/>
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="180dp"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@color/teal3"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sound of screams but the"
+                        android:textColor="@color/black"
+                        android:layout_margin="10dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="180dp"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@color/teal4"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Who scream"
+                        android:textColor="@color/black"
+                        android:layout_margin="10dp"/>
+                </LinearLayout>
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>
