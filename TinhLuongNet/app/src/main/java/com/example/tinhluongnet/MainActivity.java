@@ -17,23 +17,23 @@ public class MainActivity extends AppCompatActivity {
     EditText txtLuongGross;
     Button btnCalc;
     ListView listLuongNet;
-    ArrayList<Object> arrList = null;
-    ArrayAdapter<Object> adapter = null;
+    ArrayList<NhanVien> arrList = null;
+    ArrayAdapter<NhanVien> adapter = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        txtHoTen = findViewById(R.id.HoTenFill);
-        txtLuongGross = findViewById(R.id.LuongGrossFill);
+        txtHoTen = (EditText) findViewById(R.id.HoTenFill);
+        txtLuongGross = (EditText) findViewById(R.id.LuongGrossFill);
 
-        listLuongNet = findViewById(R.id.ListLuongNet);
+        listLuongNet = (ListView) findViewById(R.id.ListLuongNet);
 
-        arrList = new ArrayList<Object>();
+        arrList = new ArrayList<NhanVien>();
 
-        adapter = new ArrayAdapter<Object>
-                (this,
+        adapter = new ArrayAdapter<NhanVien>
+                (MainActivity.this,
                         android.R.layout.simple_list_item_1,
                         arrList);
 
@@ -43,18 +43,12 @@ public class MainActivity extends AppCompatActivity {
 
         btnCalc.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
+                NhanVien nv = new NhanVien();
+                nv.setHoTen(txtHoTen.getText().toString());
                 long LuongGross = Long.parseLong(txtLuongGross.getText().toString());
-                long LuongNet;
-                long a = (long) (LuongGross - LuongGross * 0.105);
-                if(a <= 11000000)
-                {
-                    LuongNet = a;
-                }
-                else
-                {
-                    LuongNet = (long) (LuongGross - LuongGross * 0.105 - (a - 11000000) * 0.05);
-                }
-                arrList.add("Họ tên: " + txtHoTen.getText() + "\n" + "Lương net: " + LuongNet);
+                nv.setLuongGross(LuongGross);
+
+                arrList.add(nv);
                 adapter.notifyDataSetChanged();
             }
         });
