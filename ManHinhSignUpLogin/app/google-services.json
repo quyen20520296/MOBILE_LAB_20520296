@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "171103325140",
+    "project_id": "manhinhsignuplogin",
+    "storage_bucket": "manhinhsignuplogin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:171103325140:android:a6fcd2dfce8914bd786441",
+        "android_client_info": {
+          "package_name": "com.example.manhinhsignuplogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "171103325140-b4shrebkjajj9urf5s24nlv99c2fhnoj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbeblyJhIgHHNHUycK2Z9lKPsaytJ7_oc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "171103325140-b4shrebkjajj9urf5s24nlv99c2fhnoj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
