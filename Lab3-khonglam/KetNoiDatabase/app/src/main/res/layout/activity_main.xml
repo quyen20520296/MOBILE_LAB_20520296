@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/HoTenLabel"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Full name: "
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/HoTenFill"
+        android:hint="Nhập họ và tên"
+        app:layout_constraintLeft_toRightOf="@+id/HoTenLabel"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/PhoneLabel"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Phone: "
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HoTenLabel" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/PhoneFill"
+        android:hint="Nhập số điện thoại"
+        app:layout_constraintLeft_toRightOf="@+id/PhoneLabel"
+        app:layout_constraintTop_toBottomOf="@+id/HoTenFill"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/AddFSButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add FS"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PhoneFill">
+    </Button>
+
+    <Button
+        android:id="@+id/QueryFSButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Query FS"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AddFSButton">
+    </Button>
+
+    <ListView
+        android:id="@+id/ListLuongNet"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/QueryFSButton"
+        app:layout_constraintBottom_toBottomOf="parent">
+    </ListView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
